@@ -1,5 +1,8 @@
 FROM fluent/fluentd
 
+ADD etc /fluentd/etc
+ADD grok /fluentd/grok
+
 RUN apk add --no-cache sudo build-base ruby-dev \
     && gem install \
         fluent-plugin-elasticsearch \
