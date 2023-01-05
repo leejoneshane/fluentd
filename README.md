@@ -10,7 +10,7 @@ This docker image base on [fluent/fluentd-docker-image](https://github.com/fluen
 Then you can add logstash grok pattern file with -v:
 
 ```
-docker run -v your_patterns_dir:/fluentd/grok -v your_fluentd_config:/fluentd/etc -d leejoneshane/fluent
+docker run -v your_patterns_dir:/fluentd/grok -v your_fluentd_config:/fluentd/etc -v your_buffer_storage:/fluentd/buffer -d leejoneshane/fluent
 ```
 
 Configuration your fluent.conf to use grok parser like below:
